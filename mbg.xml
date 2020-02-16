@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!--
+    context: 用于指定生成代码的环境
+        id: 标识
+        targetRuntime: 运行时的目标
+            可选值：
+                MyBatis3Simple： 生成一个比较简单的CRUD的例子
+                MyBatis3: 生成一个比较复杂的例子——支持动态SQL
+    -->
+    <context id="DB2Tables" targetRuntime="MyBatis3Simple">
+
+        <!--
+        jdbcConnection: java数据库连接的设置
+
+        -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/practial"
+                        userId="root"
+                        password="czm123456">
+        </jdbcConnection>
+
+        <!--
+        javaTypeResolver: java类型转换器
+        -->
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!--
+        javaModelGenerator： 指定java Model生成位置，java实体类
+                targetPackage: 生成java实体类的位置
+                targetProject: 目标工程
+        -->
+        <javaModelGenerator targetPackage="school.czm.entity" targetProject="Reception\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--
+        sqlMapGenerator： 指定SQL映射文件生成的配置
+            targetPackage： 目标包
+            targetProject: 目标工程
+        -->
+        <sqlMapGenerator targetPackage="mybatis.mapper"  targetProject="Reception\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!--
+        javaClientGenerator: 指定生成的接口的配置
+        -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="school.czm.mapper"  targetProject="Reception\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!--
+        table 指定目标数据库中的表和java生成的策略
+            tableName: 表名
+            domainObjectName: 表对应实体类的名字
+        -->
+        <!--<table tableName="t_admin" domainObjectName="Admin" ></table>-->
+        <!--<table tableName="t_user" domainObjectName="User" ></table>-->
+        <!--<table tableName="t_catelog" domainObjectName="Catelog" ></table>-->
+        <!--<table tableName="t_goods" domainObjectName="Good" ></table>-->
+        <!--<table tableName="t_order" domainObjectName="Order" ></table>-->
+        <!--<table tableName="t_orderitem" domainObjectName="OrderItem" ></table>-->
+        <table tableName="t_account" domainObjectName="Account" ></table>
+    </context>
+</generatorConfiguration>

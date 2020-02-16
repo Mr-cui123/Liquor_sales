@@ -1,0 +1,15 @@
+school\czm\entity\Orderitem.class
+school\czm\entity\User.class
+school\czm\cotroller\UserController.class
+school\czm\mapper\GoodMapper.class
+school\czm\mapper\CatelogMapper.class
+school\czm\cotroller\GoodController.class
+school\czm\service\GoodService.class
+school\czm\entity\Catelog.class
+school\czm\entity\Good.class
+school\czm\entity\Order.class
+school\czm\mapper\UserMapper.class
+school\czm\test\TestProject.class
+school\czm\mapper\OrderitemMapper.class
+school\czm\mapper\OrderMapper.class
+school\czm\service\UserService.class
