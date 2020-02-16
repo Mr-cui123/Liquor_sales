@@ -25,7 +25,7 @@
 
     <script>
         function onpageNum(pageNum) {
-            location.href = "${pageContext.request.contextPath}/order.action?method=queryByPage&pageNum=" + pageNum;
+            location.href = "${pageContext.request.contextPath}/Orders?method=queryByPage&pageNum=" + pageNum;
         }
 
         function deleteorder(id) {
